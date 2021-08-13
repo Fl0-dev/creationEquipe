@@ -36,6 +36,8 @@ class HomeController extends AbstractController
         return $this->render('base.html.twig', [
             'equipes' => $equipeRepository->findAll(),
             'personnes' => $personneRepository->findAll(),
+            'equipeform'=> $equipeform->createView(),
+            'personneform'=> $personneform->createView(),
         ]);
     }
 }
